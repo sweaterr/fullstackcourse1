@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>part 3</title>
+
+    <style>
+        .fs {background:lightyellow ; border:10px solid yellow ; margin-bottom:10px ; width:720px}
+        .label {
+            width:180px ;
+            display:inline-block ;
+            vertical-align:top;
+            text-align: right;
+        }
+        .lablecheckboxradio {
+            width:auto;
+        }
+        .tsmin {
+            color:white ;
+            background:red ;
+            display:inline ;
+            text-align:center;
+        }
+        .tsmax {
+            text-align:center;
+            color:white;
+            background:purple ;
+            display:inline ;
+        }
+        .ta {
+            width:360px;
+            height:50px
+        }
+        label:hover { font-size:40px }
+    </style>
+
+</head>
+<body>
+<h1>Please Enter Your Details For Our Dating Website!</h1>
+<form method = "post" enctype = "multipart/form-data" action = "https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" >
+    <fieldset class="fs">
+        <legend>Your Face</legend>
+        <label for="avatar" class="label">Your image:</label>
+        <input id="avatar" type="file" name="avatar" onchange="PreviewImage();" /> <br>
+        <label for="preview" class="label">image preview:</label>
+        <br> <img id="preview" style="width: 300px;" />
+    </fieldset>
+
+    <fieldset class="fs">
+        <legend>Your General Details</legend>
+        <label for="usrname" class="label" >Name:</label>
+        <input type="text" name="usrname" id="usrname" placeholder="Your Full Name" required> <br>
+        <label for="gender" class="label">Gender:</label>
+        <input type="radio" class="lablecheckboxradio"  name="gender" id="gender" required> Male
+        <input type="radio"  class="lablecheckboxradio"  required> Female
+        <br>
+        <label for="age" class="label" >Age:</label>
+        <input type="number" name="age" id="age" required> <br>
+        <label for="birth" class="label" >Date of birth: </label>
+        <input type="date" name="birth" id="birth" required> <br>
+        <label for="favcolor" class="label" >Favorite color: </label>
+        <input type="color" name="favcolor" id="favcolor" required> <br>
+        <label for="country" class="label" >Which country:</label>
+        <select id="country" >
+            <option value="us"> Unite State </option>
+            <option value="kr"> South Korea </option>
+            <option value="fr"> France </option>
+            <option value="ge">  Germany </option>
+            <option value="no"> No Selection </option>
+        </select>
+    </fieldset>
+
+    <fieldset class="fs">
+        <legend>Your indicators</legend>
+
+
+        <label for="indiheght" class="label" >Height:</label>
+        <div class="tsmin"> Short </div>
+        <input type="range" name="indiheght" id="indiheght" min="0" max="100">
+        <div class="tsmax" >Tall</div>
+
+        <br>
+
+
+        <label for="indisalary" class="label" >Salary:</label>
+        <div  class="tsmin" >Poor</div>
+        <input type="range" name="indisalary" id="indisalary" min="0" max="100">
+        <div  class="tsmax" >Rich</div>
+
+    </fieldset>
+
+    <fieldset class="fs">
+        <legend>Your Contact Information</legend>
+        <label for="email" class="label" >Email:</label>
+        <input type="email" name="email" id="email" min="0" max="100" required> <br>
+        <label for="mobile" class="label" >Mobile:</label>
+        <input type="tel" name="mobile" id="mobile"  min="0" max="100"> <br>
+        <label for="address" class="label" >Address:</label>
+        <textarea class="ta" name="address" id="address" rows="2" cols="30" >
+        </textarea>
+        <br>
+        <label class="label" >Method to contact you: </label>
+        <input type="checkbox" class="lablecheckboxradio" name="memail" id="memail">
+        <label for="memail"  >Email</label>
+        <input type="checkbox" class="lablecheckboxradio" name="wp" id="wp">
+        <label for="wp"  >Whatapp</label>
+        <input type="checkbox" class="lablecheckboxradio"  name="inapp" id="inapp">
+        <label for="inapp" >In-app chat</label>
+        <br>
+    </fieldset>
+
+    <input type="submit" value="Send">
+</form>
+
+<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+
+</body>
+</html>

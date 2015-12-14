@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>part 1</title>
+</head>
+<body>
+<h1>Please Enter Your Details For Our Dating Website!</h1>
+<form method = "post" enctype = "multipart/form-data" action = "https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" >
+    <fieldset>
+        <legend>Your Face</legend>
+        <script type="text/javascript">
+
+        </script>
+        <label for="avatar">Your image:</label>
+        <input id="avatar" type="file" name="avatar" onchange="PreviewImage();" /> <br>
+        image preview: <br> <img id="preview" style="width: 300px;" />
+    </fieldset> <br>
+
+    <fieldset>
+        <legend>Your General Details</legend>
+        <label for="usrname">Name:</label>
+        <input type="text" name="usrname" id="usrname" placeholder="Your Full Name" required> <br>
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" id="gender" required> Male
+        <input type="radio"  required> Female
+        <br>
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" required> <br>
+        <label for="birth">Date of birth: </label>
+        <input type="date" name="birth" id="birth" required> <br>
+        <label for="favcolor">Favorite color: </label>
+        <input type="color" name="favcolor" id="favcolor" required> <br>
+        <label for="country">Which country:</label>
+        <select id="country" >
+            <option value="us"> Unite State </option>
+            <option value="kr"> South Korea </option>
+            <option value="fr"> France </option>
+            <option value="ge">  Germany </option>
+            <option value="no"> No Selection </option>
+        </select>
+    </fieldset> <br>
+
+    <fieldset>
+        <legend>Your indicators</legend>
+        Height: Short <input type="range" name="indiHeight"  min="0" max="100"> Tall <br>
+        Salary: Poor <input type="range" name="indiSalary"  min="0" max="100"> Rich <br>
+    </fieldset> <br>
+
+    <fieldset>
+        <legend>Your Contact Information</legend>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" min="0" max="100" required> <br>
+        <label for="mobile">Mobile:</label>
+        <input type="tel" name="mobile" id="mobile"  min="0" max="100"> <br>
+        <label for="address">Address:</label>
+        <textarea name="address" id="address" rows="2" cols="30" >
+        </textarea>
+        <br>
+        <label>Method to contact you:</label>
+        <input type="checkbox" name="memail" id="memail">
+        <label for="memail">Email</label>
+        <input type="checkbox" name="wp" id="wp">
+        <label for="wp">Whatapp</label>
+        <input type="checkbox" name="inapp" id="inapp">
+        <label for="inapp">In-app chat</label>
+        <br>
+    </fieldset> <br>
+
+    <input type="submit" value="Send">
+</form>
+</body>
+</html>
