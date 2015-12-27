@@ -16,5 +16,6 @@ function show_pattern(){
         the_body.appendChild(this_div);
         top_position += 10; left_position += 10;
         width -= 20; height -= 20;
+
     }
 }
